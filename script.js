@@ -19,7 +19,7 @@ function generate() {
     swbtn = sb.value;
     chlsbg = clb.value;
     chlscl = ctc.value;
-    json = {
+    jsonData = {
         "name": "test",
         "description": "test",
         "authors": [
@@ -32,9 +32,21 @@ function generate() {
             "BACKGROUND_PRIMARY": [
                 `${background}`
             ],
+            "TEXT_NORMAL": [
+                `${textdef}`
+            ],
+            "INTERACTIVE_NORMAL": [
+                `${swbtn}`
+            ],
+            "BACKGROUND_TERTIARY": [
+                `${chlsbg}`
+            ],
+            "CHANNEL_BACKGROUND": [
+                `${background}`
+            ],
         }
     }
-    download(json, 'theme.json', 'text/plain');
+    download(JSON.stringify(jsonData, 0, 4), 'theme.json', 'text/plain');
 }
 
-genbtn.addEventListener('click', generate());
+genbtn.addEventListener('click', generate)
