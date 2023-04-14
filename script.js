@@ -22,14 +22,14 @@ function generate() {
     chlsbg = clb.value;
     chlscl = ctc.value;
     user = usr.value;
-    idc = id.value;
+    idv = idc.value;
     jsonData = {
         "name": "test",
         "description": "test",
         "authors": [
             {
                 "name": `${user}`,
-                "id": `${idc}`
+                "id": `${idv}`
             }
         ],
         "semanticColors": {
