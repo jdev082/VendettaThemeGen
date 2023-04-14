@@ -6,6 +6,7 @@ const sb = document.querySelector("#sb");
 const genbtn = document.querySelector('#genbtn');
 const usr = document.querySelector('#usr');
 const idc = document.querySelector('#id');
+const tn = document.querySelector('#tn');
 
 function download(content, fileName, contentType) {
     var a = document.createElement("a");
@@ -23,9 +24,10 @@ function generate() {
     chlscl = ctc.value;
     user = usr.value;
     idv = idc.value;
+    tnv = tn.value;
     jsonData = {
-        "name": "test",
-        "description": "test",
+        "name": `${tnv}`,
+        "description": "A theme generated with VenettaThemeGen!",
         "authors": [
             {
                 "name": `${user}`,
