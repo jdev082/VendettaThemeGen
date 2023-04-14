@@ -53,3 +53,8 @@ input:focus, input:hover {
     grid-template-columns: auto auto auto;
     grid-gap: 16pt;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
