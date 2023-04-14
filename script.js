@@ -3,7 +3,9 @@ const td = document.querySelector('#td');
 const clb = document.querySelector('#clb');
 const ctc = document.querySelector('#ctc');
 const sb = document.querySelector("#sb");
-const genbtn = document.querySelector('#genbtn')
+const genbtn = document.querySelector('#genbtn');
+const usr = document.querySelector('#usr');
+const idc = document.querySelector('#id');
 
 function download(content, fileName, contentType) {
     var a = document.createElement("a");
@@ -19,13 +21,15 @@ function generate() {
     swbtn = sb.value;
     chlsbg = clb.value;
     chlscl = ctc.value;
+    user = usr.value;
+    idc = id.value;
     jsonData = {
         "name": "test",
         "description": "test",
         "authors": [
             {
-                "name": "jdev082",
-                "id": "1038089405161807872"
+                "name": `${user}`,
+                "id": `${idc}`
             }
         ],
         "semanticColors": {

@@ -25,6 +25,7 @@ button {
     background-color: lightgreen;
     display: block;
     width: 100%;
+    cursor: pointer;
 }
 
 button:hover {
@@ -48,6 +49,7 @@ input:focus, input:hover {
 }
 
 #config {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 16pt;
 }
