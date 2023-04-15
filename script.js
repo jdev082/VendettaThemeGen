@@ -7,6 +7,8 @@ const genbtn = document.querySelector('#genbtn');
 const usr = document.querySelector('#usr');
 const idc = document.querySelector('#id');
 const tn = document.querySelector('#tn');
+const bgi = document.querySelector('#bgi');
+const bgb = document.querySelector('#bgb');
 
 function download(content, fileName, contentType) {
     var a = document.createElement("a");
@@ -25,6 +27,8 @@ function generate() {
     user = usr.value;
     idv = idc.value;
     tnv = tn.value;
+    bgiv = bgi.value;
+    bgbv = bgb.value;
     jsonData = {
         "name": `${tnv}`,
         "description": "A theme generated with VenettaThemeGen!",
@@ -50,7 +54,11 @@ function generate() {
             "CHANNEL_BACKGROUND": [
                 `${background}`
             ],
-        }
+        },
+        "background": {
+            "blur": `${bgbv}`,
+            "url": `${bgiv}`,
+        },
     }
     download(JSON.stringify(jsonData, 0, 4), 'theme.json', 'text/plain');
 }
