@@ -31,7 +31,7 @@ function generate() {
     bgbv = bgb.value;
     jsonData = {
         "name": `${tnv}`,
-        "description": "A theme generated with VenettaThemeGen!",
+        "description": "A theme generated with VendettaThemeGen!",
         "authors": [
             {
                 "name": `${user}`,
