@@ -59,7 +59,7 @@ function generate() {
             "blur": `${bgbv}`,
             "url": `${bgiv}`,
         },
-        spec: 2,
+        spec: 2
     }
     download(JSON.stringify(jsonData, 0, 4), 'theme.json', 'text/plain');
 }
